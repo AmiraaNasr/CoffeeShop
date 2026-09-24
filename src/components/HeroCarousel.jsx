@@ -5,21 +5,21 @@ function HeroCarousel() {
   const slides = [
     {
       id: 1,
-      image: '/images/slide1.jpg',
+      image: '/images/coffee1.jpg',
       title: 'Your Favorite Coffee',
       description: 'Freshly brewed coffee made for your perfect moment.',
       buttonText: 'Order Now',
     },
     {
       id: 2,
-      image: '/images/slide2.jpg',
-      title: 'Start Your Morning Right ☕',
+      image: '/images/coffee2.jpg',
+      title: 'Start Your Morning Right',
       description: 'Fresh coffee, delicious pastries and good vibes.',
       buttonText: 'Explore Menu',
     },
     {
       id: 3,
-      image: '/images/slide3.jpg',
+      image: '/images/coffee3.jpg',
       title: 'Bring Brew & Bean Home',
       description: 'Discover our coffee beans, mugs and accessories.',
       buttonText: 'Visit Shop',

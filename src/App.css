@@ -1,10 +1,11 @@
 /* ===================================================
    Brew & Bean - Simple Coffee Shop Styles
    Colors used:
-   - Dark brown: #3b2314 / #2c1810
-   - Cream:      #fefaf6
-   - Light beige:#f5ebe0 / #ede0d4
-   - White:      #ffffff
+   - Dark brown:       #3b2314 / #2c1810
+   - Very light brown: #ede0d4 / #f2e8de
+   - Cream:            #fefaf6
+   - Light beige:      #f5ebe0
+   - White:            #ffffff
    =================================================== */
 
 :root {
@@ -14,6 +15,7 @@
   --coffee-accent: #c88a4b;
   --coffee-cream: #fefaf6;
   --coffee-beige: #f5ebe0;
+  --coffee-very-light-brown: #ede0d4;
   --coffee-border: #e6dacb;
   --text-muted: #6f5f56;
 }
@@ -32,43 +34,76 @@ body {
 }
 
 /* ---------------------------------------------------
-   1. NAVBAR STYLES
+   1. NAVBAR STYLES (Very Light Brown Background)
    --------------------------------------------------- */
 .custom-navbar {
-  background-color: var(--coffee-dark) !important;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-  padding: 0.8rem 1rem;
+  background-color: var(--coffee-very-light-brown) !important;
+  border-bottom: 1px solid #dfcfc0;
+  box-shadow: 0 2px 8px rgba(59, 35, 20, 0.08);
+  padding: 0.75rem 1rem;
 }
 
 .brand-logo {
-  color: #ffffff !important;
-  font-size: 1.4rem;
+  color: var(--coffee-dark) !important;
+  font-size: 1.35rem;
   font-weight: 700;
   letter-spacing: 0.5px;
 }
 
+.brand-logo img {
+  border: 1px solid #d2beae;
+  object-fit: cover;
+}
+
+/* Nav Links Centered */
 .custom-navbar .nav-link {
-  color: #f5ebe0 !important;
-  font-weight: 500;
-  margin: 0 0.5rem;
-  transition: color 0.2s ease;
+  color: var(--coffee-dark) !important;
+  font-weight: 600;
+  margin: 0 0.6rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
 }
 
 .custom-navbar .nav-link:hover {
   color: var(--coffee-accent) !important;
+  background-color: rgba(59, 35, 20, 0.05);
 }
 
-/* Cart Button in Navbar */
-.cart-link {
-  background-color: rgba(255, 255, 255, 0.12);
+/* Search Button next to Cart */
+.nav-search-btn {
+  background-color: #ffffff !important;
+  border: 1px solid #c9b6a5 !important;
+  color: var(--coffee-dark) !important;
+  font-size: 0.88rem;
+  font-weight: 600;
   border-radius: 20px;
-  padding: 0.4rem 1rem !important;
-  transition: all 0.2s ease !important;
+  padding: 0.4rem 0.95rem;
+  transition: all 0.2s ease;
 }
 
-.cart-link:hover {
-  background-color: var(--coffee-accent) !important;
+.nav-search-btn:hover {
+  background-color: #e2d3c4 !important;
+  border-color: #bfa894 !important;
+  color: #2c1810 !important;
+}
+
+/* Cart Button */
+.nav-cart-btn {
+  background-color: var(--coffee-medium) !important;
+  border-color: var(--coffee-medium) !important;
   color: #ffffff !important;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 0.4rem 1rem;
+  transition: all 0.2s ease;
+}
+
+.nav-cart-btn:hover {
+  background-color: var(--coffee-dark) !important;
+  border-color: var(--coffee-dark) !important;
+  transform: translateY(-1px);
 }
 
 /* ---------------------------------------------------
@@ -82,11 +117,11 @@ body {
   height: 480px;
   object-fit: cover;
   background-color: #2b180d;
-  filter: brightness(0.7);
+  filter: brightness(0.72);
 }
 
 .carousel-caption-box {
-  background: rgba(43, 24, 13, 0.75);
+  background: rgba(43, 24, 13, 0.78);
   padding: 1.5rem 2rem;
   border-radius: 12px;
   max-width: 650px;
@@ -198,6 +233,80 @@ body {
   background-color: var(--coffee-dark) !important;
   border-color: var(--coffee-dark) !important;
   transform: scale(1.03);
+}
+
+/* ---------------------------------------------------
+   4. FOOTER STYLES
+   --------------------------------------------------- */
+.footer-section {
+  background-color: #2b180d;
+  color: #e8ded2;
+}
+
+.footer-brand {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.footer-text {
+  font-size: 0.95rem;
+  color: #c9bbae;
+  line-height: 1.5;
+}
+
+.footer-title {
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #d8cbbe;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--coffee-accent);
+  padding-left: 4px;
+}
+
+/* Social Icon Buttons */
+.social-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.social-icon-btn:hover {
+  background-color: var(--coffee-accent);
+  border-color: var(--coffee-accent);
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+.footer-divider {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.footer-copyright {
+  font-size: 0.88rem;
+  color: #a49487;
 }
 
 /* ---------------------------------------------------

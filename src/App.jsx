@@ -2,6 +2,7 @@ import React from 'react';
 import MyNavbar from './components/MyNavbar';
 import HeroCarousel from './components/HeroCarousel';
 import Products from './components/Products';
+import Footer from './components/Footer';
 import './App.css';
 
 function App() {
@@ -15,6 +16,9 @@ function App() {
 
       {/* 3. Products Grid */}
       <Products />
+
+      {/* 4. Footer */}
+      <Footer />
     </div>
   );
 }
