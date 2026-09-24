@@ -1,0 +1,227 @@
+/* ===================================================
+   Brew & Bean - Simple Coffee Shop Styles
+   Colors used:
+   - Dark brown: #3b2314 / #2c1810
+   - Cream:      #fefaf6
+   - Light beige:#f5ebe0 / #ede0d4
+   - White:      #ffffff
+   =================================================== */
+
+:root {
+  --coffee-dark: #3b2314;
+  --coffee-medium: #5c3a21;
+  --coffee-light: #8c5d3d;
+  --coffee-accent: #c88a4b;
+  --coffee-cream: #fefaf6;
+  --coffee-beige: #f5ebe0;
+  --coffee-border: #e6dacb;
+  --text-muted: #6f5f56;
+}
+
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--coffee-cream);
+  color: var(--coffee-dark);
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* ---------------------------------------------------
+   1. NAVBAR STYLES
+   --------------------------------------------------- */
+.custom-navbar {
+  background-color: var(--coffee-dark) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  padding: 0.8rem 1rem;
+}
+
+.brand-logo {
+  color: #ffffff !important;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.custom-navbar .nav-link {
+  color: #f5ebe0 !important;
+  font-weight: 500;
+  margin: 0 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  color: var(--coffee-accent) !important;
+}
+
+/* Cart Button in Navbar */
+.cart-link {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 0.4rem 1rem !important;
+  transition: all 0.2s ease !important;
+}
+
+.cart-link:hover {
+  background-color: var(--coffee-accent) !important;
+  color: #ffffff !important;
+}
+
+/* ---------------------------------------------------
+   2. CAROUSEL STYLES
+   --------------------------------------------------- */
+.hero-carousel {
+  background-color: var(--coffee-dark);
+}
+
+.carousel-image {
+  height: 480px;
+  object-fit: cover;
+  background-color: #2b180d;
+  filter: brightness(0.7);
+}
+
+.carousel-caption-box {
+  background: rgba(43, 24, 13, 0.75);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  max-width: 650px;
+  margin: 0 auto 3rem auto;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.carousel-caption-box h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.carousel-caption-box p {
+  font-size: 1.1rem;
+  color: #f5ebe0;
+  margin-bottom: 1.2rem;
+}
+
+.carousel-btn {
+  background-color: var(--coffee-accent) !important;
+  border-color: var(--coffee-accent) !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  padding: 0.55rem 1.6rem;
+  border-radius: 25px;
+  transition: all 0.2s ease;
+}
+
+.carousel-btn:hover {
+  background-color: #b07435 !important;
+  border-color: #b07435 !important;
+  transform: translateY(-2px);
+}
+
+/* ---------------------------------------------------
+   3. PRODUCTS SECTION STYLES
+   --------------------------------------------------- */
+.products-section {
+  background-color: var(--coffee-beige);
+}
+
+.section-title {
+  color: var(--coffee-dark);
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+/* Product Card */
+.product-card {
+  border: 1px solid var(--coffee-border);
+  border-radius: 14px;
+  background-color: #ffffff;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(59, 35, 20, 0.12) !important;
+}
+
+.product-card-img {
+  height: 200px;
+  object-fit: cover;
+  background-color: #e8ded2;
+  border-bottom: 1px solid var(--coffee-border);
+}
+
+.product-title {
+  color: var(--coffee-dark);
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-description {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.45;
+  margin-bottom: 1rem;
+}
+
+.product-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--coffee-medium);
+}
+
+.add-to-cart-btn {
+  background-color: var(--coffee-medium) !important;
+  border-color: var(--coffee-medium) !important;
+  color: #ffffff !important;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.45rem 1rem;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: var(--coffee-dark) !important;
+  border-color: var(--coffee-dark) !important;
+  transform: scale(1.03);
+}
+
+/* ---------------------------------------------------
+   RESPONSIVE ADJUSTMENTS
+   --------------------------------------------------- */
+@media (max-width: 768px) {
+  .carousel-image {
+    height: 380px;
+  }
+
+  .carousel-caption-box {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+  }
+
+  .carousel-caption-box h2 {
+    font-size: 1.4rem;
+  }
+
+  .carousel-caption-box p {
+    font-size: 0.95rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
